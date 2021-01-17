@@ -17,4 +17,4 @@ for ((i=0 ; i < 32 ; i++)); do
         fi
     done
 done
-printf "The password is: ${PASSWORD}\n"
+printf "The password for natas16 is: ${PASSWORD}\n"
