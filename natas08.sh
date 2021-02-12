@@ -20,5 +20,10 @@ ENCODED_SECRET="3d3d516343746d4d6d6c315669563362"
 ASCII=$(hex2ascii ${ENCODED_SECRET})
 ASCII_REV=$(echo ${ASCII} | rev)
 ASCII_REV_DECODED=$(echo ${ASCII_REV} | base64 --decode)
-printf "Enter ${ASCII_REV_DECODED} into the box to get the password for natas9.\n"
-# The password for natas9 is: W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+RESPONSE=$(curl --silent \
+                --user natas8:DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe \
+                --request POST \
+                --data "secret=oubWYf2kBq&submit=Submit" \
+                http://natas8.natas.labs.overthewire.org/)
+PASSWORD=$(echo ${RESPONSE} | grep -Eo "The password for natas9 is [A-Za-z0-9]{32}" | grep -Eo [A-Za-z0-9]{32})
+printf "The password for natas09 is: ${PASSWORD}\n"
