@@ -1,2 +1,2 @@
 # overthewire-natas
-My solutions for overthewire-natas website: https://overthewire.org/wargames/natas/
+This repository is my playground to provide solutions for [OverTheWire Natas](https://overthewire.org/wargames/natas/) challenges, and has no other use cases.
